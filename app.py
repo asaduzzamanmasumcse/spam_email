@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # --- Load model and vectorizer ---
-model_path = os.path.join(os.path.dirname(__file__), 'spam_model.pkl')
+model_path = os.path.join(os.path.dirname(__file__), 'naive_bayes.pkl')
 vectorizer_path = os.path.join(os.path.dirname(__file__), 'vectorizer.pkl')
 
 try:
@@ -59,3 +59,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
